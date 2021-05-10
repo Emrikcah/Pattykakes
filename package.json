@@ -4,7 +4,8 @@
   "description": "Made using Tailwindcss",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "postcss ./src/styles.css -o ./public/styles.css",
+    "prod": "NODE_ENV=production postcss ./src/styles.css -o ./public/styles.css"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,8 @@
   },
   "homepage": "https://github.com/Emrikcah/muffs-website#readme",
   "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.1.2"
   }
 }
