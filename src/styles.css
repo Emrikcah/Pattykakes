@@ -10,3 +10,7 @@
 .primary-nav{
    @apply py-5 px-3 text-white;
 }
+
+.mobile-menu{
+   @apply block py-3 px-2 text-white text-sm rounded hover:bg-secondary-100;
+}
