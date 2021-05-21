@@ -1,4 +1,4 @@
-//grab what i need
+//mobile nav
 const  menu = document.getElementById('mobile-menu');
 const burger = document.getElementById('burger');
 console.log(menu);
