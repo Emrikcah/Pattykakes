@@ -12,6 +12,10 @@ module.exports = {
           100: '#f06898',
           200: '#f595b6'
         }
+      },
+      fontFamily:{
+        headings: ['Lobster'],
+        body: ['Roboto']
       }
     },
   },

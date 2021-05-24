@@ -18,9 +18,8 @@
       <link rel="stylesheet" href="styles.css" />
       <title>PattyKakes</title>
    </head>
-   <body>
+   <body class="font-body h-screen">
       <!-- header -->
-
       <header class="site-header sticky top-0 z-50">
          <nav class="bg-primary">
             <div class="max-w-7xl mx-auto px-3">
@@ -28,15 +27,15 @@
                   <!-- logo -->
                   <div class="">
                      <a href="#" class="">
-                       <img class="w-20" src="assets/logo-lite.jpg" alt="PattyKakes">
+                        <img class="w-20" src="assets/logo-dark - Copy2.png" alt="PattyKakes" />
                      </a>
                   </div>
                   <!-- end logo -->
                   <!-- primary nav -->
                   <div class="hidden md:flex items-center">
-                     <a href="#" class="primary-nav">About</a>
-                     <a href="#" class="primary-nav">Gallery</a>
-                     <a href="#" class="py-2 px-3 order-here">Order Here</a>
+                     <a href="#" class="primary-nav text-2xl">About</a>
+                     <a href="#" class="primary-nav text-2xl">Gallery</a>
+                     <a href="#" class=" order-here">order here</a>
                   </div>
                   <!-- end primary nav -->
                   <!-- mobile btn goes here -->
@@ -73,38 +72,56 @@
       <!-- header end  -->
 
       <!-- carousel -->
-      <section class="bg-gray-700 h-screen" id="slideshow">
-         <div class="relative" id="slick">
+      <section class="h-1/2 md:h-screen md:relative  bg-gray-700 mobile-bg bg-fixed bg-center bg-no-repeat" style="background-image: url('assets/11.jpg');" id="slideshow">
+         <div class="flex justify-center md:absolute top-1/4 z-10 w-full">
+            <div class="md:flex md:justify-between items-center w-10/12 ">
+               <div class="p-3 text-white  md:text-left md:w-1/2">
+                  <h2 class="headings">PattyKakes</h2>
+                  <p class="text">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo vero at
+                     accusamus tenetur dolorum ea doloremque officia tempore facilis maiores
+                     veniam fuga deserunt, nihil quaerat exercitationem illum. Excepturi et,
+                     ad repudiandae saepe dolorem corrupti eligendi laborum vero optio, rem
+                     voluptatibus.
+                  </p>
+                  <button class=" order-here">order now</button>
+               </div>
+               
+                  <img class="w-1/3 2xl:mr-44 hidden md:block" src="assets/logo-dark - Copy2.png" alt="PattyKakes">
+               
+            </div>
+         </div>
+         <div class="relative hidden md:block" id="slick">
             <div
-               class="bg-no-repeat h-screen bg-bottom bg-cover"
+               class="carousel-bg"
                style="background-image: url('./assets/1.jpg')"
             ></div>
             <div
-               class="bg-no-repeat h-screen bg-bottom bg-cover"
+               class="carousel-bg"
                style="background-image: url('./assets/2.jpg')"
             ></div>
             <div
-               class="bg-no-repeat h-screen bg-bottom bg-cover"
+               class="carousel-bg"
                style="background-image: url('./assets/3.jpg')"
             ></div>
             <div
-               class="bg-no-repeat h-screen bg-bottom bg-cover"
+               class="carousel-bg"
                style="background-image: url('./assets/4.jpg')"
             ></div>
             <div
-               class="bg-no-repeat h-screen bg-bottom bg-cover"
+               class="carousel-bg"
                style="background-image: url('./assets/5.jpg')"
             ></div>
             <div
-               class="bg-no-repeat h-screen bg-bottom bg-cover"
+               class="carousel-bg"
                style="background-image: url('./assets/6.jpg')"
             ></div>
             <div
-               class="bg-no-repeat h-screen bg-bottom bg-cover"
+               class="carousel-bg"
                style="background-image: url('./assets/7.jpg')"
             ></div>
             <div
-               class="bg-no-repeat h-screen bg-bottom bg-cover"
+               class="carousel-bg"
                style="background-image: url('./assets/8.jpg')"
             ></div>
          </div>
@@ -112,10 +129,10 @@
       <!-- carousel end  -->
 
       <!-- about -->
-      <section class="flex justify-center py-40 h-auto bg-purple-400">
-         <div class="self-center text-center w-11/12 lg:w-3/5">
-            <h2 class="font-bold uppercase text-3xl pb-8">about me</h2>
-            <p class="text-lg">
+      <section class="flex justify-center p-7 md:py-40 h-auto bg-purple-400">
+         <div class="self-center md:text-center w-11/12 lg:w-3/5">
+            <h2 class="headings">about me</h2>
+            <p class="text">
                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut cum quisquam
                qui quae eum iure optio sunt possimus consectetur perferendis adipisci,
                maiores itaque ex sit maxime nam, commodi aspernatur labore! Et voluptate
@@ -134,13 +151,13 @@
       <!-- order -->
       <section>
          <div class="grid md:grid-cols-2 bg-yellow-600">
-            <div class="p-10 md:p-20 lg:p-40 text-left self-center">
-               <h2 class="text-3xl pb-8 uppercase">nationwide shipping</h2>
-               <p class="text-lg pb-8">
+            <div class="p-7 md:p-20 lg:p-40 text-left self-center">
+               <h2 class="headings ">nationwide shipping</h2>
+               <p class="text ">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illum
                   dicta quas iusto, facere maxime quod at blanditiis placeat rem?
                </p>
-               <button class="py-2 px-3 order-here">order now</button>
+               <button class="order-here">order now</button>
             </div>
 
             <div class="hidden md:block">
@@ -148,12 +165,11 @@
             </div>
          </div>
       </section>
-
       <!-- order end -->
 
       <!-- follow me -->
-      <section>
-         <h2 class="text-3xl uppercase text-center py-20">follow me</h2>
+      <section class="my-20">
+         <h2 class="headings text-center">follow me</h2>
       </section>
       <!-- follow me end -->
 
@@ -371,9 +387,9 @@
             </svg>
          </a>
       </footer>
-
       <!-- footer end  -->
-      <!-- slick carousel js -->
+
+      <!-- jquery and slick carousel js -->
       <script
          src="https://code.jquery.com/jquery-3.6.0.min.js"
          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -385,9 +401,11 @@
          crossorigin="anonymous"
          referrerpolicy="no-referrer"
       ></script>
-      <!-- slick carousel js end -->
+      <!-- jquery and slick carousel js end -->
 
+      <!-- custom js -->
       <script src="slickCarousel.js"></script>
       <script src="index.js"></script>
+      <!-- custom js end -->
    </body>
 </html>

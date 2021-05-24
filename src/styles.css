@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
+
 /* ./your-css-folder/styles.css */
 @tailwind base;
 @tailwind components;
@@ -6,7 +8,7 @@
 
 
 .order-here{
-   @apply bg-secondary-100 hover:bg-secondary-200 text-white  rounded transition duration-200; 
+   @apply bg-secondary-100 hover:bg-secondary-200 py-1 px-2 text-lg md:py-3 md:px-4 md:text-2xl uppercase text-white  rounded transition duration-200; 
 }
 
 .primary-nav{
@@ -15,4 +17,21 @@
 
 .mobile-menu{
    @apply block py-3 px-2 text-white text-sm rounded hover:bg-secondary-100;
+}
+
+.headings{
+   @apply font-headings uppercase sm:text-base md:text-3xl lg:text-6xl pb-4 tracking-wide;
+}
+
+.text{
+   @apply text-base md:text-xl lg:text-2xl leading-relaxed pb-4;
+}
+
+.mobile-bg{
+   background-size: auto 100%;
+}
+
+.carousel-bg{
+   @apply relative bg-gray-600 bg-blend-overlay h-screen bg-no-repeat  bg-bottom bg-cover;
+   
 }
