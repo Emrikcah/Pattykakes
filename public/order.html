@@ -20,7 +20,7 @@
                      <a href="index.html" class="">
                         <img
                            class="w-20"
-                           src="assets/logo-dark - Copy2.png"
+                           src="assets/logos/logo-dark - Copy2.png"
                            alt="PattyKakes"
                         />
                      </a>
@@ -76,76 +76,80 @@
 
       <!-- inner page nav -->
       <section class="border-b border-secondary-100">
-         <div class=" flex justify-between md:hidden p-8 border-b border-secondary-100">
-            <div>
-               dynamic name
-            </div>
-            <button class=" " id="chevron-down">
-               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+         <div class="flex justify-between md:hidden p-8 border-b border-secondary-100">
+            <div class="" id="menu-title">Menu</div>
+            <button class="" id="chevron-down">
+               <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+               >
+                  <path
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     stroke-width="2"
+                     d="M19 9l-7 7-7-7"
+                  ></path>
+               </svg>
             </button>
          </div>
-         <nav class="hidden  p-4 text-center " id="dropdown-nav">
+         <nav class="hidden md:block p-4 text-center" id="dropdown-nav">
             <div class="grid grid-cols-2 sm:grid-cols-4 justify-items-center">
-               <div>
-                  <a href="">
-                     <img src="assets/piece-of-cake.png" alt="cake">
+               <div class="filter" data-id="cake">
+                  <img src="assets/icons/piece-of-cake.png" alt="cake" />
                   <span>cakes</span>
-               </a>
                </div>
-               <div>
-                  <a href="">
-                     <img src="assets/cupcake.png" alt="cupcake">
-                     <span>cupcakes</span>
-                  </a>
+               <div class="filter" data-id="cupcake">
+                  <img src="assets/icons/cupcake.png" alt="cupcake" />
+                  <span>cupcakes</span>
                </div>
-               <div>
-                  <a href="">
-                     <img src="assets/cookie.png" alt="cookie">
-                     <span>cookies</span>
-                  </a>
+               <div class="filter" data-id="cookie">
+                  <img src="assets/icons/cookie.png" alt="cookie" />
+                  <span>cookies</span>
                </div>
-               <div>
-                  <a href="">
-                     <img src="assets/pie.png" alt="pie">
-                     <span>pie</span>
-                  </a>
+               <div class="filter" data-id="pie">
+                  <img src="assets/icons/pie.png" alt="pie" />
+                  <span>pie</span>
                </div>
             </div>
          </nav>
-        
       </section>
       <!-- inner page nav end -->
 
       <!-- menu -->
-      <section>
-         <div>
-            <div>
-               <h1>Abc</h1>
-            </div>
-            <div id="cakes">
-               <div>
-                  <img src="assets/temp/chocolate cake.jpg" alt="">
+      <section class="py-6 bg-red-400">
+         <div class="">
+            <div class="max-w-7xl mx-auto bg-gray-500 p-4" id="menu-items">
+               <div class="">
+                  <h1 id="menu-title-h1">Abc</h1>
                </div>
-               <div>
-                  <img src="assets/temp/carrot0818.jpg" alt="">
-               </div>
-               <div>
-                  <img src="assets/temp/flourless chocolate.jpg" alt="">
-               </div>
-               <div>
-                  <img src="assets/temp/lemon0818.jpg" alt="">
-               </div>
-               <div>
-                  <img src="assets/temp/marble0818.jpg" alt="">
-               </div>
-               <div>
-                  <img src="assets/temp/redvelvet0818.jpg" alt="">
-               </div>
-               <div>
-                  <img src="assets/temp/tropcoco0818.jpg" alt="">
-               </div>
-               <div>
-                  <img src="assets/temp/vanilla.jpg" alt="">
+
+               <div
+                  class="
+                     grid grid-cols-1
+                     sm:grid-cols-2
+                     lg:grid-cols-3
+                     justify-items-center
+                     gap-y-4
+                  "
+               >
+                  <!-- card -->
+                  <div class="w-72" id="put-here">
+                     <img
+                        class="mb-3 w-full h-56 object-cover object-center"
+                        src="assets/order/cake/chocolate cake.jpg"
+                        alt=""
+                     />
+                     <h2 class="mb-3 text-xl font-bold text-gray-900">Chocolate Cake</h2>
+                     <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Excepturi animi corporis modi repellat? Aut nesciunt mollitia est
+                        recusandae quae. Quidem.
+                     </p>
+                  </div>
+                  <!-- card end -->
                </div>
             </div>
          </div>
@@ -155,14 +159,14 @@
       <!-- contact form -->
       <form action="">
          <div class="flex w-full min-h-screen justify-center items-center">
-            <div class="bg-blue-400 w-full max-w-4xl p-8 rounded-xl shadow-lg text-white">
-
-            </div>
+            <div
+               class="bg-blue-400 w-full max-w-4xl p-8 rounded-xl shadow-lg text-white"
+            ></div>
          </div>
       </form>
       <!-- contact form end -->
 
-      <script src="js/index.js"></script>
+      <script type="module" src="js/index.js"></script>
    </body>
 </html>
 
