@@ -5,7 +5,7 @@ export const usedInIndex =[
       title:"chocolate cake",
       category: "cake",
       price: 10.00,
-      img:"./assets/order/cake/chocolate cake.jpg",
+      img:"./assets/order/cake/chocolatecake.jpg",
       desc: `animi corporis modi repellat? Aut nesciunt mollitia est recusandae quae.`
    },
    {
@@ -136,7 +136,7 @@ export const usedInIndex =[
       price: 10.00,
       img:"./assets/order/cupcake/cupcake vanilla blue.jpg",
       desc: `animi corporis modi repellat? Aut nesciunt mollitia est recusandae quae.`
-   },
+   }
 ]
 
 // todo: images not showing only one cupcake showing. 
