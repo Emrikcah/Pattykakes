@@ -1,2 +1,2 @@
 # muffs-website
-Made using Tailwindcss
+Made using Tailwindcss and Javascript
