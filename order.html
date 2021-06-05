@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- Tailwind css -->
+      <link rel="stylesheet" href="styles.css" />
+      <title>Document</title>
+   </head>
+   <body>
+      <!-- header -->
+      <header class="site-header sticky top-0 z-50">
+         <nav class="bg-primary">
+            <div class="max-w-7xl mx-auto px-3">
+               <div class="flex justify-between items-center">
+                  <!-- logo -->
+                  <div class="">
+                     <a href="index.html" class="">
+                        <img
+                           class="w-20"
+                           src="assets/logos/logo-dark - Copy2.png"
+                           alt="PattyKakes"
+                        />
+                     </a>
+                  </div>
+                  <!-- end logo -->
+                  <!-- primary nav -->
+                  <div class="hidden md:flex items-center">
+                     <a href="index.html" class="primary-nav text-2xl">Home</a>
+                     <a href="#" class="primary-nav text-2xl">About</a>
+                     <a href="#" class="primary-nav text-2xl">Gallery</a>
+                     <!-- <a href="order.html" class=" order-here">order here</a> -->
+                  </div>
+                  <!-- end primary nav -->
+                  <!-- mobile btn goes here -->
+                  <div class="md:hidden flex items-center">
+                     <button class="" id="burger">
+                        <svg
+                           class="w-6 h-6"
+                           fill="none"
+                           stroke="currentColor"
+                           viewBox="0 0 24 24"
+                           xmlns="http://www.w3.org/2000/svg"
+                        >
+                           <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16"
+                           ></path>
+                        </svg>
+                     </button>
+                  </div>
+                  <!-- end btn -->
+               </div>
+            </div>
+            <!-- mobile menu -->
+            <div class="hidden md:hidden" id="mobile-menu">
+               <a href="#" class="mobile-menu">About</a>
+               <a href="#" class="mobile-menu">Gallery</a>
+               <a href="#" class="mobile-menu">Order Here</a>
+            </div>
+            <!-- end mobile menu -->
+         </nav>
+      </header>
+      <!-- header end  -->
+      <!-- menu title -->
+      <section class="bg-secondary-100 h-40">
+         <div class="flex justify-center items-center h-full">
+            <h1 class="headings">Menu</h1>
+         </div>
+      </section>
+      <!-- menu title end-->
+
+      <!-- inner page nav -->
+      <section class="border-b border-secondary-100">
+         <div class="flex justify-between md:hidden p-8 border-b border-secondary-100">
+            <div class="" id="menu-title">Menu</div>
+            <button class="" id="chevron-down">
+               <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+               >
+                  <path
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     stroke-width="2"
+                     d="M19 9l-7 7-7-7"
+                  ></path>
+               </svg>
+            </button>
+         </div>
+         <nav class="hidden md:block p-4 text-center" id="dropdown-nav">
+            <div class="grid grid-cols-2 sm:grid-cols-4 justify-items-center">
+               <div class="filter" data-id="cake">
+                  <img src="assets/icons/piece-of-cake.png" alt="cake" />
+                  <span>cakes</span>
+               </div>
+               <div class="filter" data-id="cupcake">
+                  <img src="assets/icons/cupcake.png" alt="cupcake" />
+                  <span>cupcakes</span>
+               </div>
+               <div class="filter" data-id="cookie">
+                  <img src="assets/icons/cookie.png" alt="cookie" />
+                  <span>cookies</span>
+               </div>
+               <div class="filter" data-id="pie">
+                  <img src="assets/icons/pie.png" alt="pie" />
+                  <span>pie</span>
+               </div>
+            </div>
+         </nav>
+      </section>
+      <!-- inner page nav end -->
+      <!-- menu title -->
+      <div class="hidden">
+         <h1 id="menu-title-h1">abc</h1>
+      </div>
+      <!-- menu title end-->
+
+      <!-- menu -->
+      <main
+         class="
+            
+            grid grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-3
+            justify-items-center
+            
+         "
+         id="put-here"
+      >
+         <!-- card -->
+         
+            <div class="relative">
+               
+                  <img
+                     class="w-full object-cover object-center"
+                     src="./assets/order/menu/menu-cake2.jpg"
+                     alt=""
+                  />
+               
+               <div class="bg-primary text-center absolute opacity-0 hover:opacity-100 top-0 left-0 transition-opacity delay-300 ease-in-out w-full h-full">
+                  <div class="flex flex-col justify-center items-center  h-full bg-primary">
+                     <h2 class="headings">Cakes</h2>
+                     <a href="#" class="order-here filter" data-id="cake">View Cakes</a>
+                  </div>
+               </div>
+            </div>
+            <div class="relative">
+               
+                  <img
+                     class="w-full object-cover object-center"
+                     src="./assets/order/menu/menu-cupcakes.jpg"
+                     alt=""
+                  />
+               
+               <div class="bg-primary text-center absolute opacity-0 hover:opacity-100 top-0 left-0 transition-opacity delay-300 ease-in-out w-full h-full">
+                  <div class="flex flex-col justify-center items-center  h-full bg-primary">
+                     <h2 class="headings">cupcakes</h2>
+                     <a href="#" class="order-here filter" data-id="cupcake">View Cupcakes</a>
+                  </div>
+               </div>
+            </div>
+            <div class="relative">
+               
+                  <img
+                     class="w-full object-cover object-center"
+                     src="./assets/order/menu/menu-cookies.jpg"
+                     alt=""
+                  />
+               
+               <div class="bg-primary text-center absolute opacity-0 hover:opacity-100 top-0 left-0 transition-opacity delay-300 ease-in-out w-full h-full">
+                  <div class="flex flex-col justify-center items-center  h-full bg-primary">
+                     <h2 class="headings">cookies</h2>
+                     <a href="#" class="order-here filter" data-id="cake">View Cookies</a>
+                  </div>
+               </div>
+            </div>
+            <div class="relative">
+               
+                  <img
+                     class="w-full object-cover object-center"
+                     src="./assets/order/menu/menu-pie.jpg"
+                     alt=""
+                  />
+               
+               <div class="bg-primary text-center absolute opacity-0 hover:opacity-100 top-0 left-0 transition-opacity delay-300 ease-in-out w-full h-full">
+                  <div class="flex flex-col justify-center items-center  h-full bg-primary">
+                     <h2 class="headings">pies</h2>
+                     <a href="#" class="order-here filter" data-id="cake">View Pies</a>
+                  </div>
+               </div>
+            </div>
+        
+        
+         <!-- card end -->
+      </main>
+      <!-- menu end -->
+
+      <!-- contact form -->
+      <form action="">
+         <div class="flex w-full min-h-screen justify-center items-center">
+            <div
+               class="bg-blue-400 w-full max-w-4xl p-8 rounded-xl shadow-lg text-white"
+            ></div>
+         </div>
+      </form>
+      <!-- contact form end -->
+
+      <script type="module" src="js/index.js"></script>
+   </body>
+</html>
+<!-- mobile menu not working on index.html -->
+<!-- remove gallery nav link on order.html -->
+<!-- place logo in the middle -->
+<!-- add menu -->
+<!-- add form -->
+<!-- validate form -->
+<!-- hook form up to email -->
+<!-- add styles to an element on click -->
+<!-- inner nav title is hidden until user clicks an option -->
+
+<!-- py-6
+      max-w-7xl
+      mx-auto -->
