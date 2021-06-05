@@ -1,2 +1,2 @@
-# muffs-website
+# Pattykakes
 Made using Tailwindcss and Javascript
