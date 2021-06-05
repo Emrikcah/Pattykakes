@@ -1,8 +1,8 @@
 import { usedInIndex } from "./menu.js";
 
 //top mobile nav
-const menu = document.getElementById("mobile-menu");
 const burger = document.getElementById("burger");
+const menu = document.getElementById("mobile-menu");
 
 
 burger.addEventListener("click", () => {
