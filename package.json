@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Emrikcah/muffs-website/issues"
   },
-  "homepage": "https://github.com/Emrikcah/muffs-website#readme",
+  "homepage": "https://github.com/Emrikcah/public/index.html",
   "dependencies": {
     "autoprefixer": "^10.2.5",
     "postcss-cli": "^8.3.1",
