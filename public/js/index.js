@@ -83,7 +83,7 @@ const checkEmail = (email) => {
 };
 
 form.addEventListener("submit", (e) => {
-   e.preventDefault();
+   // e.preventDefault();
 
    if (cusName.value === "") {
       showError(cusName, "Your name is required");
