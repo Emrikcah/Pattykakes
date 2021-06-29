@@ -260,11 +260,13 @@
                <div>
                   <div class="bg-white rounded-xl shadow-lg p-8 text-gray-600 md:w-80">
                      <!-- form -->
-                     <form class="flex flex-col" action="" id="form">
+                     <form class="flex flex-col" action="https://formsubmit.co/rcurry5@gmail.com" method="POST" id="form">
                         <div class="mb-2">
                            <label for="" class="text-sm">Your first / last name</label>
                            <input
                            id="customername"
+                           name="name"
+                           
                               type="text"
                               placeholder="Your name"
                               class="
@@ -286,7 +288,8 @@
                            <label for="" class="text-sm">Email Address</label>
                            <input
                            id="customeremail"
-                              type="text"
+                           name="email"
+                              type="email"
                               placeholder="youremail@example.com"
                               class="mt-2 ring-1 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-primary"
                            />
@@ -304,7 +307,8 @@
                            ></textarea>
                            <small class="invisible font-medium tracking-wide text-red-500 text-xs  ml-1">Error message</small>
                         </div>
-                        <button class="inline bg-primary self-end text-white font-bold rounded-lg px-6 py-2 uppercase text-sm">Submit</button>
+                        <input type="hidden" name="_subject" value="New PattyKakes Order!">
+                        <button class="inline bg-primary self-end text-white font-bold rounded-lg px-6 py-2 uppercase text-sm" type="submit">Submit</button>
                      </form>
                      <!-- form end -->
                   </div>
