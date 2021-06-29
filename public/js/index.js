@@ -83,7 +83,7 @@ const checkEmail = (email) => {
 };
 
 form.addEventListener("submit", (e) => {
-   // e.preventDefault();
+   e.preventDefault();
 
    if (cusName.value === "") {
       showError(cusName, "Your name is required");
@@ -102,6 +102,5 @@ form.addEventListener("submit", (e) => {
 form.addEventListener('focus',(e)=>{
    if (e.target.classList.contains('border')) {
       e.target.classList.remove('border');
-      
    }
 },true)
