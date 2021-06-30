@@ -158,7 +158,20 @@
       <div>
          <div class="flex w-full min-h-screen justify-center items-center">
             <div
-               class="flex flex-col md:flex-row md:space-x-6 space-y-5 md:space-y-0 bg-primary w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg text-white"
+               class="
+                  flex flex-col
+                  md:flex-row md:space-x-6
+                  space-y-5
+                  md:space-y-0
+                  bg-primary
+                  w-full
+                  max-w-4xl
+                  p-8
+                  sm:p-12
+                  rounded-xl
+                  shadow-lg
+                  text-white
+               "
             >
                <div class="flex flex-col justify-between space-y-8">
                   <!-- title -->
@@ -247,35 +260,58 @@
                <div>
                   <div class="bg-white rounded-xl shadow-lg p-8 text-gray-600 md:w-80">
                      <!-- form -->
-                     <form class="flex flex-col space-y-4" action="">
-                        <div>
-                           <label for="" class="text-sm">Your name</label>
+                     <form target="_blank" action="https://formsubmit.co/f41c97a4a63b8d5c1421d9b40951b928" id="form" class="flex flex-col" method="POST">
+                        <div class="mb-2">
+                           <label for="" class="text-sm">Your first / last name</label>
                            <input
+                           id="customername"
+                           name="name"
+                           required
                               type="text"
                               placeholder="Your name"
-                              class="mt-2 ring-1 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-primary"
+                              class="
+                                 mt-2
+                                 ring-1 ring-gray-300
+                                 w-full
+                                 rounded-md
+                                 px-4
+                                 py-2
+                                 outline-none
+                                 focus:ring-2 focus:ring-primary
+                                 
+                              "
                            />
+                           <small class="invisible font-medium tracking-wide text-red-500 text-xs  ml-1">Error message</small>
                         </div>
 
-                        <div>
+                        <div class="mb-2">
                            <label for="" class="text-sm">Email Address</label>
                            <input
-                              type="text"
-                              placeholder="Your email"
+                           id="customeremail"
+                           name="email"
+                           required
+                              type="email"
+                              placeholder="youremail@example.com"
                               class="mt-2 ring-1 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-primary"
                            />
+                           <small class="invisible font-medium tracking-wide text-red-500 text-xs  ml-1">Error message</small>
                         </div>
 
-                        <div>
+                        <div class="mb-2">
                            <label for="" class="text-sm">Order</label>
                            <textarea
+                           id="customerorder"
+                           name="order"
+                           required
                               type="text"
                               placeholder="Enter item name and quantity here"
                               rows="4"
                               class="mt-2 ring-1 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-primary"
                            ></textarea>
+                           <small class="invisible font-medium tracking-wide text-red-500 text-xs  ml-1">Error message</small>
                         </div>
-                        <button class="inline bg-primary self-end text-white font-bold rounded-lg px-6 py-2 uppercase text-sm">Submit</button>
+                        <input type="hidden" name="_subject" value="New PattyKakes Order!">
+                        <button class="inline bg-primary self-end text-white font-bold rounded-lg px-6 py-2 uppercase text-sm" type="submit">Submit</button>
                      </form>
                      <!-- form end -->
                   </div>
@@ -291,9 +327,8 @@
 </html>
 <!-- mobile menu not working on index.html -->
 <!-- remove gallery nav link on order.html -->
-<!-- place logo in the middle -->
-<!-- add menu -->
-<!-- add form -->
+
+
 <!-- validate form -->
 <!-- hook form up to email -->
 <!-- add styles to an element on click -->

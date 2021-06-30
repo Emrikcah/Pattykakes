@@ -4,7 +4,6 @@ import { usedInIndex } from "./menu.js";
 const burger = document.getElementById("burger");
 const menu = document.getElementById("mobile-menu");
 
-
 burger.addEventListener("click", () => {
    menu.classList.toggle("hidden");
 });
@@ -17,15 +16,11 @@ chevron.addEventListener("click", () => {
    dropdown.classList.toggle("hidden");
 });
 
-//order.html inner nav
+//order.html inner nav filter
 const menuTitle = document.getElementById("menu-title");
 const menuTitleH1 = document.getElementById("menu-title-h1");
 const puthere = document.getElementById("put-here");
 const filterNav = document.querySelectorAll(".filter");
-
-
-
-
 
 filterNav.forEach((btn) => {
    btn.addEventListener("click", (e) => {
@@ -34,20 +29,18 @@ filterNav.forEach((btn) => {
 
       const menuCategory = usedInIndex.filter((menuItem) => {
          if (menuItem.category === category) {
-            
             return menuItem;
          }
       });
-      displayMenuItems(menuCategory)
+      displayMenuItems(menuCategory);
       menuTitle.textContent = category;
       menuTitleH1.textContent = category;
    });
 });
 
-
 const displayMenuItems = (menuItems) => {
-   let displayMenu = menuItems.map((item)=>{
-     return `<div class="w-72">
+   let displayMenu = menuItems.map((item) => {
+      return `<div class="w-72">
      <img
         class="mb-3 w-full h-56 object-cover object-center"
         src="${item.img}"
@@ -58,8 +51,56 @@ const displayMenuItems = (menuItems) => {
        ${item.desc}
      </p>
   </div>`;
-   })
+   });
    displayMenu = displayMenu.join("");
    puthere.innerHTML = displayMenu;
-}
+};
 
+//order.html form validation
+//add border border-red-600 and show small tag on error
+const form = document.getElementById("form");
+const cusName = document.getElementById("customername");
+const cusEmail = document.getElementById("customeremail");
+const cusOrder = document.getElementById("customerorder");
+
+//display the error
+const showError = (input, msg) => {
+   input.classList.add("border", "border-red-600");
+   let small = input.nextElementSibling;
+
+   small.classList.remove("invisible");
+   small.classList.add("block");
+   small.innerText = msg;
+  
+};
+
+
+//check email
+const checkEmail = (email) => {
+   const re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+   return re.test(String(email).toLowerCase());
+};
+
+form.addEventListener("submit", (e) => {
+   // e.preventDefault();
+
+   if (cusName.value === "") {
+      showError(cusName, "Your name is required");
+   }
+   if (cusEmail.value === "") {
+      showError(cusEmail, "Your email is required");
+   } else if (!checkEmail(cusEmail.value)) {
+      showError(cusEmail, "Your email is not valid");
+   }
+   if (cusOrder.value === "") {
+      showError(cusOrder, "Please place your order here. Item name and quantity.");
+   }
+});
+
+//remove the red border on focus
+form.addEventListener('focus',(e)=>{
+   if (e.target.classList.contains('border')) {
+      e.target.classList.remove('border');
+   }
+},true)
