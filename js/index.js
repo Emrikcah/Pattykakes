@@ -64,7 +64,9 @@ const cusEmail = document.getElementById("customeremail");
 const cusOrder = document.getElementById("customerorder");
 
 //display the error
-const showError = (input, msg) => {
+const showError = (input, msg,e) => {
+   e.preventDefault();
+
    input.classList.add("border", "border-red-600");
    let small = input.nextElementSibling;
 
@@ -98,7 +100,7 @@ form.addEventListener("submit", (e) => {
    }
 });
 
-//remove the red border on focus
+//remove the red border on focus after an error
 form.addEventListener('focus',(e)=>{
    if (e.target.classList.contains('border')) {
       e.target.classList.remove('border');
