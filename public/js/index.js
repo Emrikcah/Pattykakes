@@ -81,22 +81,26 @@ const checkEmail = (email) => {
 };
 
 form.addEventListener("submit", (e) => {
-   if (cusName.value === "") {
-      e.preventDefault();
+   let submit = true;
 
+   if (cusName.value === "") {
       showError(cusName, "Your name is required");
+      submit = false;
    }
    if (cusEmail.value === "") {
-      e.preventDefault();
-
       showError(cusEmail, "Your email is required");
+      submit = false;
    } else if (!checkEmail(cusEmail.value)) {
       showError(cusEmail, "Your email is not valid");
+      submit = false;
    }
    if (cusOrder.value === "") {
-      e.preventDefault();
-
       showError(cusOrder, "Please place your order here. Item name and quantity.");
+      submit = false;
+   }
+
+   if (submit === false) {
+      e.preventDefault();
    }
 });
 
