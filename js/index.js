@@ -65,17 +65,13 @@ const cusOrder = document.getElementById("customerorder");
 
 //display the error
 const showError = (input, msg) => {
-   
-
    input.classList.add("border", "border-red-600");
    let small = input.nextElementSibling;
 
    small.classList.remove("invisible");
    small.classList.add("block");
    small.innerText = msg;
-  
 };
-
 
 //check email
 const checkEmail = (email) => {
@@ -85,27 +81,32 @@ const checkEmail = (email) => {
 };
 
 form.addEventListener("submit", (e) => {
-   
-
    if (cusName.value === "") {
-      e.stopPropagation();
+      e.preventDefault();
+
       showError(cusName, "Your name is required");
    }
    if (cusEmail.value === "") {
-      e.stopPropagation();
+      e.preventDefault();
+
       showError(cusEmail, "Your email is required");
    } else if (!checkEmail(cusEmail.value)) {
       showError(cusEmail, "Your email is not valid");
    }
    if (cusOrder.value === "") {
-      e.stopPropagation();
+      e.preventDefault();
+
       showError(cusOrder, "Please place your order here. Item name and quantity.");
    }
 });
 
 //remove the red border on focus after an error
-form.addEventListener('focus',(e)=>{
-   if (e.target.classList.contains('border')) {
-      e.target.classList.remove('border');
-   }
-},true)
+form.addEventListener(
+   "focus",
+   (e) => {
+      if (e.target.classList.contains("border")) {
+         e.target.classList.remove("border");
+      }
+   },
+   true
+);
