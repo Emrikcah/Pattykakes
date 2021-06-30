@@ -64,8 +64,8 @@ const cusEmail = document.getElementById("customeremail");
 const cusOrder = document.getElementById("customerorder");
 
 //display the error
-const showError = (input, msg,e) => {
-   e.preventDefault();
+const showError = (input, msg) => {
+   
 
    input.classList.add("border", "border-red-600");
    let small = input.nextElementSibling;
@@ -85,17 +85,20 @@ const checkEmail = (email) => {
 };
 
 form.addEventListener("submit", (e) => {
-   // e.preventDefault();
+   
 
    if (cusName.value === "") {
+      e.preventDefault();
       showError(cusName, "Your name is required");
    }
    if (cusEmail.value === "") {
+      e.preventDefault();
       showError(cusEmail, "Your email is required");
    } else if (!checkEmail(cusEmail.value)) {
       showError(cusEmail, "Your email is not valid");
    }
    if (cusOrder.value === "") {
+      e.preventDefault();
       showError(cusOrder, "Please place your order here. Item name and quantity.");
    }
 });
