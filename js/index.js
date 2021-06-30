@@ -88,17 +88,17 @@ form.addEventListener("submit", (e) => {
    
 
    if (cusName.value === "") {
-      e.preventDefault();
+      e.stopPropagation();
       showError(cusName, "Your name is required");
    }
    if (cusEmail.value === "") {
-      e.preventDefault();
+      e.stopPropagation();
       showError(cusEmail, "Your email is required");
    } else if (!checkEmail(cusEmail.value)) {
       showError(cusEmail, "Your email is not valid");
    }
    if (cusOrder.value === "") {
-      e.preventDefault();
+      e.stopPropagation();
       showError(cusOrder, "Please place your order here. Item name and quantity.");
    }
 });
